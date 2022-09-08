@@ -1,0 +1,74 @@
+diff --git a/node_modules/@vant/cli/dist/package-entry.js b/node_modules/@vant/cli/dist/package-entry.js
+new file mode 100644
+index 0000000..90bd45d
+--- /dev/null
++++ b/node_modules/@vant/cli/dist/package-entry.js
+@@ -0,0 +1,30 @@
++import DemoButton from 'F:/npm/wx-web-sdk/src/demo-button';
++
++const version = '1.0.0';
++
++function install(app) {
++  const components = [
++    DemoButton
++  ];
++
++  components.forEach(item => {
++    if (item.install) {
++      app.use(item);
++    } else if (item.name) {
++      app.component(item.name, item);
++    }
++  });
++}
++
++
++  export {
++    install,
++    version,
++    DemoButton
++  };
++  
++
++export default {
++  install,
++  version
++};
+diff --git a/node_modules/@vant/cli/dist/style-deps.json b/node_modules/@vant/cli/dist/style-deps.json
+new file mode 100644
+index 0000000..e067114
+--- /dev/null
++++ b/node_modules/@vant/cli/dist/style-deps.json
+@@ -0,0 +1,8 @@
++{
++  "map": {
++    "demo-button": []
++  },
++  "sequence": [
++    "demo-button"
++  ]
++}
+\ No newline at end of file
+diff --git a/node_modules/@vant/cli/site/mobile/App.vue b/node_modules/@vant/cli/site/mobile/App.vue
+index 4048572..76e2950 100644
+--- a/node_modules/@vant/cli/site/mobile/App.vue
++++ b/node_modules/@vant/cli/site/mobile/App.vue
+@@ -1,11 +1,13 @@
+ <template>
+   <demo-nav />
+   <router-view v-slot="{ Component }">
+-    <keep-alive>
+-      <demo-section>
+-        <component :is="Component" />
+-      </demo-section>
+-    </keep-alive>
++    <transition :name="'fade'" mode="out-in">
++      <keep-alive>
++        <demo-section>
++          <component :is="Component" />
++        </demo-section>
++      </keep-alive>
++    </transition>
+   </router-view>
+ </template>
+ 
