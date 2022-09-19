@@ -1,6 +1,6 @@
 {
   "name": "wx-web-sdk",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "lib/wx-web-sdk.js",
   "module": "es/index.js",
