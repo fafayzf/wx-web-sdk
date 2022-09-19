@@ -22,5 +22,18 @@ npm install wx-web-sdk
 | wx.showToast       | showToast       |
 
 ### 使用
+```js
 
-##### 同微信小程序，详细 [请点击](https://developers.weixin.qq.com/miniprogram/dev/api/)
+import { 
+  hideLoading, 
+  hideToast, 
+  showActionSheet, 
+  showLoading, 
+  showModal, 
+  showToast   
+} from 'wx-web-sdk'
+
+```
+
+
+### api使用 同微信小程序，详细 [请点击](https://developers.weixin.qq.com/miniprogram/dev/api/)
