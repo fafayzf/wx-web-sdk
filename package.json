@@ -60,5 +60,13 @@
   ],
   "dependencies": {
     "vant": "^3.6.2"
+  },
+  "homepage": "https://github.com/fafayzf/wx-web-sdk#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fafayzf/wx-web-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fafayzf/wx-web-sdk/issues"
   }
 }
